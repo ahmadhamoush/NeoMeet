@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles1.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <section class="header">
+    <nav id="nav">
+      <h2 class="logo"><a style="text-decoration: none; color:#fff;" href="index.html">NEO MEET</a></h2>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#download">DOWNLOAD</a></li>
+          <li>
+            <form class="" action="/form" method="get">
+              <button class="transparent-btn" type="submit" name="button">CONTACT</button>
+            </form>
+          </li>
+          <li class="dropdown">
+            <a class="dropbtn" href="#">LOGIN</a>
+            <div class="dropdown-content">
+              <form action="/login" method="get">
+                <button class="transparent-btn" type="submit" name="user">USER</button>
+              </form>
+              <form action="/admin" method="get">
+                <button class="transparent-btn" type="submit" name="admin">ADMIN</button>
+              </form>
+              <form action="/register" method="get">
+                <button class="transparent-btn" type="submit" name="register">REGISTER</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="title">
+      <h1>Welcome to Neo Meet,</h1>
+      <p>Connect with Anyone World Wide. Never Miss a Meeting</p>
+      <form class="" action="http://localhost:3030" method="get">
+        <button type="submit" class="explore-btn transparent-btn" style="font-size:2rem;">Join a meeting!</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="features">
+    <h1>Our Features</h1>
+    <p>Join our app to have some of the most advanced technology that assures your security and real time video calling so that you can call anyone anytime from anywhere without worrying about your meetings </p>
+    <div class="feature-row">
+      <div id="fade1" class="feature-col">
+        <h3>Flexible</h3>
+        <p> With our app you can now call anyone from anywhere and you will be able to connect with them on many devices now even including smart home gadgets such as the fridge!</p>
+      </div>
+      <div id="fade2" class="feature-col">
+        <h3>Inclusive</h3>
+        <p>Equal experience for everyone from around the globe no matter what geographical location, language or communication style</p>
+      </div>
+      <div id="fade3" class="feature-col">
+        <h3>Secure</h3>
+        <p>With the latest techonology you can now use our app to have the safest calls on earth where no one could spy on you using the latest peer to peer encrypted techonology</p>
+      </div>
+      <div id="demo"></div>
+      <div id="demo2"></div>
+      <div id="demo3"></div>
+
+    </div>
+  </section>
+
+  <section id="devices">
+    <img class="phone-img" id="element" src="images/phone.png" alt="">
+    <div id="info" class="info">
+      <h2>Compatible with all Devices</h2>
+      <p style="line-height:4;"> With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+        This ensures your meeting will load instantly, keeping your meetings flexible.</p>
+    </div>
+  </section>
+
+  <section id="organize">
+
+    <div id="organize-text">
+      <h1 class="organize-content"><span style="color:#0174DF;">O</span>rganize all your meetings with one click</h1>
+      <h2 class="organize-content"><span style="color:#0174DF;">N</span>eat and Easy to use</h2>
+      <h1 class="organize-content">With our new in-built software, you can check all your meetings, <br>and set reminders for you upcoming meetings!</h1>
+    </div>
+    <button id="btn-anime" class="check-button transparent-btn" href="#">Check your meetings!</button>
+  </section>
+
+  <section id="connect">
+    <h1>Connect with Friends!</h1>
+    <p> Using NeoMeet you can now connect with friends all around the world at any time you want without any limits or any fees for you to pay ! </p>
+    <div class="people">
+      <img class="people-img" src="images/people/img1.png" alt="">
+      <img class="people-img" src="images/people/img2.png" alt="">
+      <img class="people-img" src="images/people/img3.png" alt="">
+      <img class="people-img" src="images/people/img4.png" alt="">
+
+    </div>
+  </section>
+  <section id="download">
+    <h1 id="download1">W<span class="download-text">hy Wait</span></h1>
+    <h2 id="download2"><span class="download-text">W</span>hen you Can</h2>
+    <div id="downloads">
+      <a class="download-button" href="download.txt" download><i class="fab fa-apple download-icon"></i>Download Now!</a>
+      <a class="download-button button2" href="download.txt" download><i class="fab fa-google-play download-icon" a></i>Download Now!</a>
+    </div>
+  </section>
+
+  <section id="footer">
+    <h3>Need help?</h3>
+    <a class="contact-us" href="index2.html">Contact Us</a>
+    <ul class="icons">
+      <li><a href="#"><img src="images/icons/facebook.png"></a></li>
+      <li><a href="#"><img src="images/icons/twitter.png"></a></li>
+      <li><a href="#"><img src="images/icons/instagram.png"></a></li>
+    </ul>
+  </section>
+
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+  </script>
+  <script src="scripts/homepage-script.js" charset="utf-8"></script>
+  <script src="scripts/animations-script.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>

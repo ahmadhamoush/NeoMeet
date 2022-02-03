@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2% 6%;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#landing-page {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+}
+
+.globe-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+
+/* ABSTRACT CODE */
+.abstract {
+  z-index: 1;
+}
+
+.abstract h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.abstract h3 {
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.abstract p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+}
+
+.abstract a {
+  display: inline-block;
+  font-size: 1.3rem;
+  background-color: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.abstract a:hover {
+  letter-spacing: 6px;
+}
+
+/* ICONS CODE */
+.icons {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons li {
+  list-style: none;
+}
+
+.icons li a {
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.icons li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}
+
+@media (max-width: 600px) {
+  .abstract{
+    text-align: center;
+  }
+  .abstract h2 {
+    font-size: 2rem;
+  }
+
+  .abstract h3 {
+    font-size: 1.3em;
+  }
+  .icons{
+    right:45%;;
+  }
+
+}
+@media (max-width:385px){
+  .abstract p{
+  padding-bottom: 60px;
+  }
+  .icons{
+    right:40%;
+  }
+
+}

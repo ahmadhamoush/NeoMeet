@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+</head>
+<style>
+  body {
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 0.5% 2%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(4, 9, 30, 1);
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: left;
+    margin-right: 50px;
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0174DF;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+
+  .input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .input:focus {
+    border: 3px solid #0174DF;
+  }
+
+  .form {
+
+    padding-top: 200px;
+    margin-right: 0;
+    color: black;
+  }
+
+  .textarea {
+    width: 80%;
+    padding: 50px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .textarea:focus {
+    border: 3px solid #0174DF;
+  }
+
+  .transparent-btn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 13px;
+  }
+
+  #fname {
+    margin-right: 20px;
+  }
+
+  #number {
+    margin-right: 63px;
+  }
+
+  @media(max-width:1024px) {
+    #fname {
+      margin-right: 5px;
+    }
+
+    #number {
+      margin-right: 0;
+    }
+
+    .input {
+      width: 95%;
+    }
+
+    .form {
+      margin: 50px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+</style>
+
+<body>
+  <section class="header">
+    <nav>
+      <h2 class="logo"><a style="text-decoration: none; color:#0174DF;" href="index.html">NEO MEET</a></h2>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li>
+            <form class="" action="/" method="get">
+              <button style="color: #ccc" class="transparent-btn" type="submit" name="button">HOME</button>
+            </form>
+          </li>
+          <li><a href="index1.html#features">ABOUT</a></li>
+          <li><a href="index1.html#download">DOWNLOAD</a></li>
+          <li><a href="index2.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <div class="form">
+    <form method="post" enctype="multipart/form-data">
+      <label for="fname">First Name</label>
+      <input class="input" type="text" id="fname" name="fname" value="">
+      <label for="lname">Last Name</label>
+      <input class="input" type="text" id="lname" name="lname" value="">
+      <br>
+      <label for="number">Telephone</label>
+      <input class="input" type="number" id="number" name="number" value="">
+      <label for="email">Email</label>
+      <input class="input" type="text" id="email" name="email" value="">
+      <p style="font-size:1.5rem; color:#eeee;">Report an issue</p>
+      <input id="issue" class=" textarea" type="text" name="issue" value="">
+      <br>
+      <button class="submit-btn" type="button" onclick="sendFormData()" name="" value="Submit">Submit</button>
+    </form>
+  </div>
+</body>
+<script src="scripts/form-script.js" charset="utf-8"></script>
+
+</html>

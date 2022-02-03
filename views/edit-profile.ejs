@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles5.css">
+    <style media="screen">
+        body{
+          background-image: url('../images/bg-3.png');
+            background-repeat: no-repeat;
+        }
+        div{
+          text-align: center;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color:black">  Edit Profile</h1>
+    <div class="">
+        <form class="" action="/changeUser" method="post">
+          <input type="text" name="newUser" value="" placeholder="Enter new UserName">
+          <input style="display:none;"type="text" name="email" value="<%=email%>">
+      <button type="submit" name="button">Change Username</button>
+        </form><br>
+        <form class="" action="/changePass" method="post">
+          <input type="password" name="oldPass" value="" placeholder="Enter old pass">
+            <input type="password" name="newPass" value="" placeholder="Enter new pass">
+            <input style="display:none;"type="text" name="email" value="<%=email%>">
+        <button type="submit" name="button">Change Password</button>
+        </form> <br>
+      <form class="" action="/deleteUser" method="post">
+        <button type="submit" name="button">Delete Account</button>
+        <input style="display:none;"type="text" name="email" value="<%=email%>">
+      </form>
+      <a href="/">Back</a>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    show(){
+      const inpt = document.getElementById('delete');
+      inpt.style.display="block";
+    }
+  </script>
+</html>

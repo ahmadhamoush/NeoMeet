@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles1.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+</head>
+
+<body>
+  <section class="header">
+    <nav id="nav">
+      <h2 class="logo"><a style="text-decoration: none; color:#fff;" href="index.html">NEO MEET</a></h2>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#download">DOWNLOAD</a></li>
+          <li><a href="/form">CONTACT</a></li>
+        <li class="dropdown">
+          <form class="" action="/" method="get">
+            <button class="transparent-btn" type="submit" name="button">LOGOUT</button>
+          </form>
+    <div class="dropdown-content">
+      <form action="/edit" method="post">
+        <button class="transparent-btn" type="submit" name="user">EDIT PROFILE</button>
+        <input style="display:none" type="text" name="email" value="<%=email%>">
+      </form>
+    </div>
+  </li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="title">
+      <h1><%=title%></h1>
+      <p>Connect with Anyone World Wide. Never Miss a Meeting</p>
+      <div style="display:flex; justify-content:center"class="">
+        <form class="" action="http://localhost:3030/" method="get">
+          <button type="submit"class="explore-btn transparent-btn" style="font-size:2rem;" >Join a meeting!</button>
+        </form>
+        <form class="" action="http://localhost:3030/call" method="get">
+          <button type="submit"class="explore-btn transparent-btn" style="font-size:2rem;" >Create a meeting!</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="organize">
+
+    <h1 class="organize-content"><span style="color:#0174DF;">O</span>rganize all your meetings with one click</h1>
+    <h2 class="organize-content"><span style="color:#0174DF;">N</span>eat and Easy to use</h2>
+    <h1 class="organize-content">With our new in-built software, you can check all your meetings, <br>and set reminders for you upcoming meetings!</h1>
+    <a class="check-button" href="#">Check your meetings!</a>
+  </section>
+
+  <section style="border-radius:0; margin:0;" id="footer">
+    <h3>Need help?</h3>
+    <a class="contact-us" href="index2.html">Contact Us</a>
+    <ul class="icons">
+      <li><a href="#"><img src="images/icons/facebook.png"></a></li>
+      <li><a href="#"><img src="images/icons/twitter.png"></a></li>
+      <li><a href="#"><img src="images/icons/instagram.png"></a></li>
+    </ul>
+  </section>
+
+  <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }
+    </script>
+      <script src="scripts/animations-script.js" charset="utf-8"></script>
+</body>
+
+</html>

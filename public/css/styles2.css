@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-image: url('../images/contact-us.jpg');
+}
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links{
+  text-align: right;
+  padding-left: 60%;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+
+}
+.nav-links ul li a{
+  color: #eeee;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0174DF;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+.submit-btn{
+font-size: 2rem;
+background-color: #fff;
+padding: 7px 12px;
+text-decoration: none;
+margin-top: 10px;
+color: #111;
+letter-spacing: 2px;
+transition: 0.4s;
+border-radius: 20px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  color:#fff;font-size:15px;
+
+}
+.submit-btn:hover{
+  letter-spacing: 1px;
+  color: #0174DF;
+  opacity: 0.7;
+}
+@media (max-width:1024px){
+  nav{
+    flex-direction: column;
+}
+.nav-links{
+  text-align: center;
+  padding-left: 0;
+}
+  .nav-links ul li a{
+    color: black;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+}
+@media (max-width:385px){
+  nav{
+    flex-direction: column;
+    padding: 2%;
+}
+.nav-links{
+  text-align: center;
+  padding-left: 0;
+}
+  .nav-links ul li a{
+    color: black;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+}

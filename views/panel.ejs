@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/styles5.css">
+    <style media="screen">
+      form{
+        padding: 15px;
+      }
+      button{
+        font-size: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome, admin</h2>
+    <form class="" action="http://localhost:3000/update" method="post">
+          <button id="btn-1" onclick="showInput()" type="submit">Add new feature #1</button>
+              <input style=""id="newHeader" type="text" name="featureName" placeholder="Enter Feature Name">
+              <input style=""id="newFeature" type="text" name="featureDesc" placeholder="Enter Feature Description">
+    </form>
+    <form class="" action="http://localhost:3000/update2" method="post">
+          <button id="btn-1" onclick="showInput()" type="submit">Add new feature #2</button>
+          <input style=""id="newHeader" type="text" name="featureName" placeholder="Enter Feature Name">
+          <input style=""id="newFeature" type="text" name="featureDesc" placeholder="Enter Feature Description">
+    </form>
+    <form class="" action="http://localhost:3000/update3" method="post">
+          <button id="btn-1" onclick="showInput()" type="submit">Add new feature #3</button>
+          <input style=""id="newHeader" type="text" name="featureName" placeholder="Enter Feature Name">
+          <input style=""id="newFeature" type="text" name="featureDesc" placeholder="Enter Feature Description">
+    </form>
+
+      <!-- <button type="button" name="button">View Users</button> -->
+      <button id="btn"type="button" onclick="showInput()" name="button">Delete User</button> <br>
+      <form class="" action="/delete" method="post">
+        <div style="display:none" id="toDelete">
+          <input type="text" name="userName" value="" placeholder="Enter User to Delete">
+          <button type="submit" name="button">Delete</button>
+          <button type="button" onclick="hideInput()"name="button">Cancel</button>
+        </div>
+      </form>
+    <form class="" action="http://localhost:3000/admin-logout" method="post">
+      <button type="submit" name="button">Logout</button>
+    </form>
+
+    <a href="/">Back</a>
+
+    <script type="text/javascript">
+    const input  =document.getElementById('toDelete');
+    const btn = document.getElementById('btn');
+    function showInput(){
+      input.style.display ="block";
+    }
+    function hideInput(){
+      input.style.display= "none";
+    }
+    </script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

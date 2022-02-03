@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/styles5.css">
+    <meta name="google-signin-client_id" content="233771810045-vqh6ifm1q20hoa5j4sh6cj83gdojmgbb.apps.googleusercontent.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+
+    <h1>Login</h1>
+   <form class="" action="/login" method="post">
+     <input type="email" name="username" value="" placeholder="Enter email"><br>
+     <input type="password" name="password" value="" placeholder="Enter password"><br>
+     <button type="submit" name="button">Login</button>
+   </form>
+   <p>Or Sign in with your Google Account</p>
+      <button style=" padding:0; margin:0;" class="g-signin2" data-onsuccess="onSignIn"></button>
+	<a href="/">Back</a>
+   <script>
+   function signOut() {
+       var auth2 = gapi.auth2.getAuthInstance();
+       auth2.signOut().then(function () {
+       console.log('User signed out.');
+       });
+   }
+   </script>
+
+   <script>
+   function onSignIn(googleUser) {
+       var id_token = googleUser.getAuthResponse().id_token;
+
+       var xhr = new XMLHttpRequest();
+       xhr.open('POST', '/google');
+       xhr.setRequestHeader('Content-Type', 'application/json');
+       xhr.onload = function() {
+           console.log('Signed in as: ' + xhr.responseText);
+           if(xhr.responseText == 'success'){
+             location.assign('profile');
+             signOut();
+           }
+       };
+       xhr.send(JSON.stringify({token : id_token}));
+     }
+   </script>
+  </body>
+</html>
